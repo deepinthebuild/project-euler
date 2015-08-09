@@ -9,4 +9,4 @@ while (test_number > 1):
 	d += 1
 
 
-print prime_list
+print max(prime_list)
