@@ -1,4 +1,5 @@
 import math
+from time import time
 
 total = 0
 index = 0
@@ -10,6 +11,8 @@ def Fibonacci(param):
 	B = (1 - math.sqrt(5))/2
 	temp = (A**param - B**param) / math.sqrt(5)
 	return int(round(temp))	
+
+t = time()
 	
 while(current_fibonacci < upper_limit):
 	if current_fibonacci % 2 == 0:
@@ -17,5 +20,7 @@ while(current_fibonacci < upper_limit):
 	index += 1
 	current_fibonacci = Fibonacci(index)
 
+t = time() - t
+
 print total
-	
+print t	
