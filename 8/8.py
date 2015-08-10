@@ -41,6 +41,6 @@ for k in range(len(problem_string)-window):
 		output = window_product
 		index = k
 
-print "The string with the greatest product is " + problem_string[k:k+window] + ", at position " + str(k)
+print "The string with the greatest product is " + problem_string[index:index+window] + ", at position " + str(index)
 print "The product is " + str(output)
 		
