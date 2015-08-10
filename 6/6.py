@@ -1,4 +1,4 @@
-def SquareOfSums(input): #sums from 1 to input
+def SquareOfSums(input): #runs from 1 to input
 	output = 0
 	for x in range(input):
 		output += (x+1)
