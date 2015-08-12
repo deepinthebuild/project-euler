@@ -48,12 +48,10 @@ def DownLeftProduct(input_array, row, column):
 		return product
 
 def MaxDirectionalProduct(input_array, row, column):
-	MaxProduct = 0
-	MaxProduct = max(RightProduct(input_array, row, column), MaxProduct)
-	MaxProduct = max(DownProduct(input_array, row, column), MaxProduct)
-	MaxProduct = max(DownRightProduct(input_array, row, column), MaxProduct)
-	MaxProduct = max(DownLeftProduct(input_array, row, column), MaxProduct)
-	return MaxProduct
+	arguments = [input_array, row, column]
+	functions = [RightProduct, DownProduct, DownRightProduct, DownLeftProduct]
+	products = [f(*arguments) for f in functions]
+	return max(products)
 
 
 with open('data.txt') as data:
