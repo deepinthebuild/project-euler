@@ -1,3 +1,5 @@
+triangle = []
+
 def PairwiseMaximum(input_list):
 	output_list = []
 	for x in range(len(input_list) - 1):
@@ -14,14 +16,11 @@ def TriangleCollapse(list_of_lists):
 	return working_entry
 
 with open('data.txt') as data:
-
-#import data and set it to the right type
-	triangle = []
 	for line in data:
 		triangle.append(line.split())
 	triangle = [[int(k) for k in line] for line in triangle]
 
-	while(len(triangle) != 1):
-		triangle = TriangleCollapse(triangle)
+while(len(triangle) != 1):
+	triangle = TriangleCollapse(triangle)
 
-	print triangle
+print triangle
