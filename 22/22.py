@@ -21,6 +21,6 @@ total_score = 0
 name_scores = []
 
 for position, name in enumerate(names):
-	name_scores.append(WordScore(name) * (position + 1))
+	total_score += (WordScore(name) * (position + 1))
 
-print sum(name_scores)
+print total_score
