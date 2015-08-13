@@ -18,7 +18,6 @@ with open('names.txt') as data:
 	names.sort()
 
 total_score = 0
-name_scores = []
 
 for position, name in enumerate(names):
 	total_score += (WordScore(name) * (position + 1))
