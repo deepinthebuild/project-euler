@@ -59,7 +59,7 @@ class VectorizedNumber(object):
 		elif exponent % 2 == 0:
 			return (self * self)**(exponent/2)
 		else:
-			return self * (self * self)**(exponent/2)
+			return self * (self * self)**((exponent-1)/2)
 
 		
 	def __str__(self):
@@ -67,7 +67,6 @@ class VectorizedNumber(object):
 
 
 
-kay = VectorizedNumber(2)
-kay = kay**1000
+kay = VectorizedNumber(2) ** 1000
 
 print kay.digital_sum()
