@@ -48,6 +48,17 @@ class VectorizedNumber(object):
 		output.rectify()
 		return output
 
+
+	def __pow__(self, exponent):
+		if exponent == 0:
+			return VectorizedNumber(1)
+		elif exponent == 1:
+			return self
+		elif exponent % 2 == 0:
+			return (self * self)**(exponent/2)
+		else:
+			return self * (self * self)**(exponent/2)
+
 		
 	def __str__(self):
 		return ''.join(str(x) for x in self.digits[::-1])
@@ -55,10 +66,6 @@ class VectorizedNumber(object):
 
 
 kay = VectorizedNumber(2)
-jay = VectorizedNumber(2)
-
-for x in range(999):
-	kay = kay * jay
-
+kay = kay**1000
 
 print kay.digital_sum()
