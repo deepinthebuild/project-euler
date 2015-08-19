@@ -25,9 +25,11 @@ class VectorizedNumber(object):
 			del self.digits[-1]
 		
 		self.length = len(list(self.digits))			
+
 	
 	def digital_sum(self):
 		return sum(self.digits)				
+
 
 	def __add__(self, other):
 
