@@ -57,6 +57,7 @@ class Date:
         else:
             self.leapyear = 0
 
+
     def AdvanceMonth(self):
         if self.month < 12:
             self.month += 1
@@ -64,6 +65,7 @@ class Date:
         else:
             self.AdvanceYear()
     
+
     def AdvanceDay(self):
         if self.leapyear:
             if self.day < self.month_lengths_leapyear[self.month]:
