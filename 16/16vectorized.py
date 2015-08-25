@@ -1,7 +1,7 @@
 import itertools
 
 
-class VectorizedNumber(object):
+class VectorizedNumber():
 
 	def __init__(self, input_number):
 		self.digits = []
