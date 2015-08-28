@@ -81,7 +81,7 @@ ConwayMatrix = np.identity(92, dtype=object)
 for x in range(20):
     ConwayMatrix = np.dot(ConwayMatrix, ConwayStartMatrix)
 """
-#ConwayMatrix = np.linalg.matrix_power(ConwayStartMatrix, 30)
+ConwayMatrix = np.linalg.matrix_power(ConwayStartMatrix, DEPTH - START_DEPTH)
 
 """
 for index, key in enumerate(binary_string):
@@ -90,10 +90,6 @@ for index, key in enumerate(binary_string):
     elif key == '1':
         ConwayMatrix = np.dot(ConwayMatrix, np.linalg.matrix_power(ConwayMatrix_2,index+1))
 """
-"""
 print int(np.dot(ConwayMatrix[44], OnesWeightVector) + np.dot(ConwayMatrix[70], OnesWeightVector)) % MODULUS,
 print int(np.dot(ConwayMatrix[44], TwosWeightVector) + np.dot(ConwayMatrix[70], TwosWeightVector)) % MODULUS,
 print int(np.dot(ConwayMatrix[44], ThreesWeightVector) + np.dot(ConwayMatrix[70], ThreesWeightVector)) % MODULUS,
-"""
-for x in range(92):
-    ConwayTest(ConwayStack[x])
